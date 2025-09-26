@@ -1,0 +1,17 @@
+name: Deploy Angular
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/deploy
+        with:
+          image-name: my-angular-app
+          registry: ghcr.io/${{ github.repository }}
+          tag: latest
