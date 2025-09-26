@@ -23,4 +23,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/irynafeshchenkoinferno/angular-docker:latest
+          tags: ghcr.io/${{ github.repository }}/angular-docker:latest
